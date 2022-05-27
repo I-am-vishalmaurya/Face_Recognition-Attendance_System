@@ -23,7 +23,8 @@ SECRET_KEY = 'django-insecure-$p$t=27@=wkboz6#w5(ex!buc31p+^i!f7usbfs5v9nu+43n4w
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DEBUG', False) == 'True'
-print(f'DEBUG: {DEBUG}')
+print(f'DEBUG: {DEBUG} with the type of {type(DEBUG)}')
+
 
 ALLOWED_HOSTS = os.getenv("DJANGO_ALLOWED_HOSTS", "127.0.0.1,localhost,dolphin-app-u4l8q.ondigitalocean.app").split(",")
 
@@ -76,7 +77,7 @@ WSGI_APPLICATION = 'attendance_system.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
-if DEBUG == "True":
+if DEBUG == True:
     DATABASES = {
             'default': {
                 'ENGINE': 'django.db.backends.sqlite3',
