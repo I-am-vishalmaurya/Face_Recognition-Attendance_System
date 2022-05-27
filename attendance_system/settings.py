@@ -26,7 +26,7 @@ DEBUG = os.environ.get('DEBUG', False) == 'True'
 print(f'DEBUG: {DEBUG} with the type of {type(DEBUG)}')
 
 
-ALLOWED_HOSTS = os.getenv("DJANGO_ALLOWED_HOST", "127.0.0.1,localhost,dolphin-app-u4l8q.ondigitalocean.app").split(",")
+ALLOWED_HOSTS = os.getenv("DJANGO_ALLOWED_HOST", "127.0.0.1,localhost").split(",")
 
 
 # Application definition
