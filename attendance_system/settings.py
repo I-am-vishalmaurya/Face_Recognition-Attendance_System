@@ -22,10 +22,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-$p$t=27@=wkboz6#w5(ex!buc31p+^i!f7usbfs5v9nu+43n4w'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get('DEBUG', False)
+DEBUG = os.environ.get('DEBUG', False) == 'True'
 print(f'DEBUG: {DEBUG}')
 
-ALLOWED_HOSTS = os.getenv("DJANGO_ALLOWED_HOSTS", "127.0.0.1,localhost,dolphin-app-u4l8q.ondigitalocean.app/").split(",")
+ALLOWED_HOSTS = os.getenv("DJANGO_ALLOWED_HOSTS", "127.0.0.1,localhost,dolphin-app-u4l8q.ondigitalocean.app").split(",")
 
 
 # Application definition
